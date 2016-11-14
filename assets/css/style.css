@@ -1,0 +1,78 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: #57718B;
+  font-family: "Lucida Console", Monaco, monospace;
+  line-height: 24px;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+.container{
+  width: 100%;
+  max-width: 960px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#gameTitle{
+  background: #FF5733;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#instructions{
+  background: #ffbf00;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+ 
+#tracker{
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+
+#total{
+  background: #009900;
+  padding: 59px;
+  text-align: left;
+  margin-right: 10px;
+}
+
+#wins-loss{
+  background: #00ace6;
+  padding: 25px;
+}
+
+/* crystal sizes */
+
+#crystals{
+  margin-left: 70px;
+}
+
+.click{
+  height: 100px;
+  width: 100px;
+}
+
+#totalScore{
+  font-size: 25px;
+  background: #39ac73;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+#score-update{
+  font-size: 25px;
+  background: #39ac73;
+  padding: 20px;
+  height: 200px;
+  margin-bottom: 40px;
+}
+

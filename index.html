@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Crystal Collector</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="assets/css/reset.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<header>
+				<div class="row">
+					<div class="col-sm-6" id="gameTitle">
+            			<h1>Crystals Collector!</h1>
+					</div>
+        		</div>
+       		</header>
+
+		
+        	<div class="row" >
+				<div class="col-sm-7" id="instructions">
+	            	<p>You will be given a random number at the start of the game.</p>
+	            	<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+					<p>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</p>
+					<p>The value of each crystal is hidden from you until you click on it.</p>
+					<p>Each time when the game starts, the game will change the values of each crystal.</p>
+				</div>
+			</div>		
+			
+			<div class="row" id="tracker">
+				<div class="col-sm-4" id="total">
+					<!--Computer generated value-->
+				</div>
+
+				<div class="col-sm-3" id="wins-loss">
+					<!--Wins and losses updated-->				
+					<p>Wins:<span id="Wins">0</span></p><br>
+					<p>Losses:<span id="Losses">0</span></p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6" id="crystals">
+					<p>
+					<img src="assets/images/gem1.png" class="click" id="pink">
+					<img src="assets/images/gem2.png" class="click" id="orange">
+					<img src="assets/images/gem3.png" class="click" id="purple">
+					<img src="assets/images/gem4.png" class="click" id="blue">
+					</p>
+				</div>
+			</div>			
+
+			<div class="row">
+				<div class="col-sm-4" id="totalScore">
+						<p>Your total score:</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4" id="score-update">
+						<p id="score"> <!--User score updates here--></p><br>
+						<p><span id="Message"><!--win/lose message--></span></p>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+		<script src="assets/javascript/game.js"></script>
+
+	</body>
+</html>
