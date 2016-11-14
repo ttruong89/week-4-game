@@ -1,46 +1,36 @@
- // Global variables.
-		
-		var playerScore = 0;
- 		var wins = 0;
- 		var losses = 0;
- 		var computerScore = 0;
- 		var pink = 0;
- 		var orange = 0;
- 		var purple = 0;
- 		var blue = 0;
+ $(document).ready(function() {
 
-// Restart game function.
- 	function gameReset(){
- 		playerScore = 0;
- 		computerScore = Math.floor((Math.random() * 102) + 19);
- 		pink = Math.ceil(Math.random() * 12);
- 		orange = Math.ceil(Math.random() * 12);
- 		purple = Math.ceil(Math.random() * 12);
- 		blue = Math.ceil(Math.random() * 12);
- 	};	
+ // General variables for gameplay
+		var wins = 0;
+ 		var losses = 0;
+ 		var playerScore = 0;
+ 		var computerScore = Math.ceil((Math.random() * 102) + 19);
+
+ 		var pink = Math.ceil(Math.random() * 12);
+ 		var orange = Math.ceil(Math.random() * 12);
+ 		var purple = Math.ceil(Math.random() * 12);
+ 		var blue = Math.ceil(Math.random() * 12);
 
  // Gameplay function.
  	function game(){
  		if (playerScore == computerScore) {
  			wins++;
  			$("#Message").html("You win!");
- 			scoreUpdate();
  			gameReset();
  		} else if (playerScore > computerScore) {
  			losses++;
  			$("#Message").html("You lose!");
- 			scoreUpdate();
  			gameReset();
  		} else {
  			scoreUpdate();
  		}
  	};
 
- 	function event() {
  		$("#total").append(computerScore);
- 		
  		$("#score").append(playerScore);
 
+ // Click events for gameplay.
+ $(document).ready(function() {
  		$("#pink").click(function(){
  			playerScore = playerScore + pink;
  			game();
@@ -60,10 +50,7 @@
  			playerScore = playerScore + blue;
  			game();
  		});
-
- 	}
-
- 	
+ 	});
 
  // Updates user's score and wins/loss section.
  	function scoreUpdate() {
@@ -77,11 +64,17 @@
  		$("#Losses").append(losses);
  	};
 
- 
-$(document).ready(function() {
+ // Restart game function.
+ 	function gameReset(){
+ 		playerScore = 0;
+ 		computerScore = Math.floor((Math.random() * 102) + 19);
+ 		$("#total").empty();
+ 		$("#total").append(computerScore);
+ 		pink = Math.ceil(Math.random() * 12);
+ 		orange = Math.ceil(Math.random() * 12);
+ 		purple = Math.ceil(Math.random() * 12);
+ 		blue = Math.ceil(Math.random() * 12);
+ 		scoreUpdate();
+ 	};	
 
- // Reset function.
- 	gameReset();
- 	event();
-
- });
+});
